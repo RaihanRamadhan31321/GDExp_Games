@@ -1,0 +1,380 @@
+/*Page Pertama*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+/*Header Cover*/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+    background: #0d0d0d; /*Background Header*/
+    color: white;
+    position: fixed;          /* ← INI yang membuat header tetap di atas */
+    top: 0;                  /* ← Menempel di bagian paling atas */
+    width: 100%;             /* ← Lebar penuh layar */
+    z-index: 1000;           /* ← Supaya berada di atas elemen lain */
+}
+/* Container logo + title */
+.logo-container {
+    position: absolute;
+    top: -15px;
+    left: 235px;
+}
+
+/* Style logo */
+.logo-img {
+    width: 120px;   /* bisa disesuaikan */
+    height: auto;
+}
+
+/* Font Header GDExp */
+.logo-title {
+    font-size: 2.4rem;
+    text-transform: capitalize;
+    font-weight: bold;
+    background: linear-gradient(45deg, #673ab7, #00e5ff);
+    -webkit-background-clip: text; /* untuk Chrome, Safari */
+    -webkit-text-fill-color: transparent; 
+    background-clip: text; /* untuk browser modern */
+    color: transparent; /* pastikan warna text transparan agar gradient terlihat */
+}
+
+.menu-center {
+    position: absolute; 
+    top: 32px;          
+    left: 580px;   
+}
+/* Font Header GDExp */
+
+/* Font Header Tengah */
+.menu-center a {
+    margin: 12px;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+.menu-right {
+    display: flex;
+    align-items: center;
+}
+/* Font Header Tengah */
+
+/* Font Header sebelah Kiri */
+.menu-right button {
+    background: none;
+    border: none;
+    font-size: 21px;
+    margin-left: 12px;
+    cursor: pointer;
+    background: linear-gradient(45deg, #673ab7, #00e5ff);
+    -webkit-background-clip: text; /* untuk Chrome, Safari */
+    -webkit-text-fill-color: transparent; 
+    background-clip: text; /* untuk browser modern */
+    color: transparent; /* pastikan warna text transparan agar gradient terlihat */
+}
+/* Font Header sebelah Kiri */
+
+/* Kotak Pencarian */
+.search-box {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 50px; /* bikin kapsul */
+    padding: 5px 10px;
+    margin: 0 10px;
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    padding: 5px;
+    width: 150px;
+    border-radius: 50px;
+}
+
+.search-icon {
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    margin-left: 5px;
+    cursor: pointer;
+}
+/* Kotak Pencarian */
+
+main {
+    background: #1e1a2e; /* Background Page2*/
+}
+/* Kanvas gambar sebagai area kerja */
+.img-canvas {
+    position: relative;     /* wadah referensi posisi absolut */
+    width: 100%;
+    max-width: 1100px;      /* opsional: batasi lebar */
+    height: 710px;          /* tinggi area untuk menaruh gambar */
+    margin: 40px auto;      /* center di halaman */
+    top: 5px;               /* tinggi jarak gambar */
+    border-radius: 12px;    /* opsional */
+    overflow: visible;      /* biar gambar boleh “keluar” sedikit */
+}
+
+/* Semua gambar di dalam kanvas bisa diposisikan manual */
+.img-item {
+    position: absolute;     /* kunci: bisa atur top/left per gambar */
+    width: 1100px;           /* atur ukuran default */
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.2s ease;
+}
+
+/* 👇 Cara mudah: pakai variabel CSS --x dan --y untuk posisi */
+.img-item {
+    left: var(--x, 0px);
+    top:  var(--y, 0px);
+}
+
+/* Efek interaktif (opsional) */
+.img-item:hover {
+    transform: translateY(-6px) scale(1.02);
+}
+
+/* Responsif: di layar kecil, rapikan jadi stack */
+@media (max-width: 640px) {
+    .img-canvas {
+        height: auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 16px;
+    }
+    .img-item {
+        position: static;   /* matikan posisi custom di HP kecil */
+        width: 100%;
+    }
+}
+/*End Page Pertama*/
+
+
+/*Page Kedua*/
+/* 🎯 Style untuk section games */
+
+.games-title {
+    position: absolute; 
+    top: 850px;          
+    left: 30px;
+    font-size: 50px;
+    background: linear-gradient(45deg, #673ab7, #00e5ff);
+    -webkit-background-clip: text; /* untuk Chrome, Safari */
+    -webkit-text-fill-color: transparent; 
+    background-clip: text; /* untuk browser modern */
+    color: transparent; /* pastikan warna text transparan agar gradient terlihat */
+}
+
+/* Background*/
+.games-section {
+    padding: 200px 80px;
+    background: #1e1a2e; /* Background Page2*/
+    text-align: center;
+    color: white;
+}
+
+.game-list {
+    position: relative;
+    width: 100%;
+    height: 1000px; /* beri tinggi biar card kelihatan */
+}
+
+/* Card dan Animations*/
+.game-card {
+    background: #778dac;
+    border-radius: 15px;
+    padding: 20px;
+    width: 100%;
+    max-width: 320px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(92, 27, 135, 0.566);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeIn 1s forwards;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Efek halus pada gambar di dalam card */
+.game-card img {
+    transition: transform 0.4s ease;
+}
+
+.game-card:hover img {
+    transform: scale(1.08);
+}
+
+.game-card.WildAR:nth-child(1) { animation-delay: 0.2s; }
+.game-card.EdukasiMengajar:nth-child(2) { animation-delay: 0.4s; }
+.game-card.FishCatcher:nth-child(3) { animation-delay: 0.6s; }
+.game-card.Kngadi-ngadi:nth-child(4) { animation-delay: 0.8s; }
+.game-card.PulangSekolahMoments:nth-child(5) { animation-delay: 1s; }
+
+
+.game-card:hover {
+    transform: translateY(-12px) scale(1.05);
+    box-shadow: 0 25px 25px rgba(68, 20, 150, 0.692);
+}
+
+
+/*Posisi Game Card*/
+.game-card.WildAR:nth-child(1) {
+    position: absolute;
+    top: 20px;
+    left: 100px;
+}
+
+.game-card.EdukasiMengajar:nth-child(2) {
+    position: absolute;
+    top: 20px;
+    left: 500px;
+}
+
+.game-card.FishCatcher:nth-child(3) {
+    position: absolute;
+    top: 20px;
+    left: 900px;
+}
+
+.game-card.Kngadi-ngadi:nth-child(4){
+    position: absolute;
+    top: 500px;
+    left: 310px;
+}
+
+.game-card.PulangSekolahMoments:nth-child(5){
+    position: absolute;
+    top: 500px;
+    left: 710px;
+}
+/*Posisi Game Card*/
+
+/*Isi dari Box Card*/
+.game-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.game-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.desc {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #c9d1d9;
+}
+
+.info {
+    font-size: 12px;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.download-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #199ff3;
+    color: white;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.2s;
+}
+
+.download-btn:hover {
+    background: #0d6efd;
+    transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Animasi Fade In pada Gambar*/
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+/*Isi dari Box Card*/
+
+/* === PAGE 3: Social Media === */
+.social-section {
+    padding: 50px;
+    background: #0d0d0d; /* hitam gelap */
+    color: rgb(255, 255, 255);
+    text-align: left;
+    background-size: cover; 
+}
+
+
+.social-title {
+    position: absolute; 
+    top: 2210px;          
+    left: 30px;
+    font-size: 50px;
+    background: linear-gradient(45deg, #673ab7, #00e5ff);
+    -webkit-background-clip: text; /* untuk Chrome, Safari */
+    -webkit-text-fill-color: transparent; 
+    background-clip: text; /* untuk browser modern */
+    color: transparent; /* pastikan warna text transparan agar gradient terlihat */
+    margin-bottom: 5px;
+}
+
+/* Ikon Sosial Media */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.social-icons img {
+    width: 60px;
+    height: 60px;
+    transition: transform 0.3s, filter 0.3s;
+    cursor: pointer;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 10px #46169ae3);
+}
+
+/* Bagian kerja sama */
+.partnership, .studio-partner {
+    margin: 20px auto;
+    max-width: 800px;
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 12px;
+    transition: transform 0.3s;
+}
+
+.partnership:hover, .studio-partner:hover {
+    transform: translateY(-5px);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
