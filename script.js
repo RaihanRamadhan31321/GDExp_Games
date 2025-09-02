@@ -5,4 +5,3 @@ function scrollToSection(sectionId) {
     block: 'start'
   });
 }
-
