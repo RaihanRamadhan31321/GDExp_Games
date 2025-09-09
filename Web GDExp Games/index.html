@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GDExp Games Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 🎯 Canvas sebagai background -->
+<canvas id="bgCanvas"></canvas>
+
+<script>
+    // Resize canvas otomatis sesuai layar
+    const canvas = document.getElementById("bgCanvas");
+    const ctx = canvas.getContext("2d");
+
+    function resizeCanvas() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        ctx.fillStyle = "#1e1a2e"; // Warna background
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+    }
+
+    window.addEventListener("resize", resizeCanvas);
+    resizeCanvas();
+</script>
+</body>
+</html>
+
+    <!--Halaman 1-->
+    <header>
+        <div class="logo-title">GDExp Games</div>
+
+        <div class="logo-container">
+        <img src="Folder Web GDExp/LOGO FINAL.png" alt="GDExp Logo" class="logo-img">
+    </div>
+
+        <nav class="menu-center">
+            <a href="#games">Games</a>
+            <a href="#about">About</a>
+            <a href="Portfolio.html">Portfolio</a>
+            <a href="Career.html">Career</a>
+            <a href="#social-media">Social Media</a>
+        </nav>
+
+        <div class="menu-right">
+            <button>🌐</button>
+            <div class="search-box">
+                <input type="text" placeholder="Search...">
+                <span class="search-icon">🔍</span>
+            </div>
+            <button>Login</button>
+        </div>
+    </header>
+
+    <!-- Kanvas untuk menaruh gambar dengan posisi custom -->
+<div class="img-canvas" id="about">
+    <img
+        src="Folder Web GDExp/Games.jpg" 
+        alt="Games.jpg" 
+        class="img-item"
+        style="--x: 20px;  --y: 65px;"
+    >
+</div>
+
+
+<section id="games" class="games-section">
+  <div class="header-container">
+    <h1 class="game-title">GDExp_Games </h1>
+    <h1 class="game-subtitle">adalah Studio Game Development Indie yang berasal dari Indonesia.</h1>
+    <p class="game-description">
+        Berdiri pada 15 Agustus 2025 GDExp_Games merupakan Studio game Level up dari beberapa studio indie yang telah dibangun dan akan melanjutkan produk-produk yang sudah dibuat sebelumnya. GDExp_Games 
+        dibangun oleh HANNN yang memiliki visi memberikan Experience,kreatif,inovasi dan unique dari game yang dibuat dan akan berfokus pada pengembangan game platform web games, mobile games dan dekstop 
+        games. 
+    </p>
+  </div>
+</section>
+        <!--Halaman 1-->
+
+    <!--Halaman 2-->
+    <h2 class="games-title">Games</h2> <!-- 🎯 judul -->
+
+    <div class="game-list">
+
+        <!-- Game 1 -->
+        <div class="game-card WildAR">
+            <img src="Folder Web GDExp/WildAR.png" width="300px" height="200px">
+            <h3>WildAR</h3>
+            <p class="desc">Game Augmented Reality dengan bertamakan hewan-hewan.</p>
+            <p class="info">📅 17 Agustus 2025 | 🤝 GDExp Games</p>
+            <a href="https://gdexp-games.itch.io/wildar-games" target="_blank" class="download-btn">Download</a>
+        </div>
+
+        <!-- Game 2 -->
+        <div class="game-card EdukasiMengajar">
+            <img src="Folder Web GDExp/The Dreamly.jpg" width="300" height="200">
+            <h3>Game Edukasi Mengajar</h3>
+            <p class="desc">Game petualangan interaktif tentang Game Development.</p>
+            <p class="info">📅 20 Juni 2025 | 🤝 GDExp Games</p>
+            <a href="https://gdexp-games.itch.io/education" target="_blank" class="download-btn">Download</a>
+        </div>
+
+        <!-- Game 3 -->
+        <div class="game-card FishCatcher">
+            <img src="Folder Web GDExp/Fish Sucipto.png" width="300" height="200">
+            <h3>Fish Catcher</h3>
+            <p class="desc">Game2D pixel-art untuk dengan mengumpulkan Point sebanyak-banyaknya.</p>
+            <p class="info">📅 2 Juni 2025 | 🤝 GDExp Games x Maewoo</p>
+            <a href="https://harppen.itch.io/fish-catcher" target="_blank" class="download-btn">Download</a>
+        </div>
+
+        <!-- Game 4 -->
+        <div class="game-card Kngadi-ngadi">
+            <img src="Folder Web GDExp/K-ngadi-ngadi.png" width="300" height="200">
+            <h3>K ngadi-ngadi</h3>
+            <p class="desc">Game2D Battle Adventure menyelesaikan semua Story dan Melawan Boss.</p>
+            <p class="info">📅 19 Desember 2023 | 🤝 GDExp Games x Anuka-ini-anu.</p>
+            <a href="https://anuka-ini-anu.itch.io/ngadi-ngadi" target="_blank" class="download-btn">Download</a>
+        </div>
+
+        <!-- Game 5 -->
+        <div class="game-card PulangSekolahMoments">
+            <img src="Folder Web GDExp/Pulang Sekolah Moment.jpg" width="300" height="200">
+            <h3>Pulang Sekolah Moments</h3>
+            <p class="desc">Game endless runner bertema anak yang Pulang Sekolah.</p>
+            <p class="info">📅 05 Juni 2023 | 🤝 GDExp Games x Claestis</p>
+            <a href="https://gdexp-games.itch.io/pulang-sekolah-moment" target="_blank" class="download-btn">Download</a>
+        </div>
+
+    </div>
+</section>
+        <!--Halaman 2-->
+
+
+        <!--Halaman 3-->
+    <!-- 🎯 PAGE 3: Social Media & Partnership -->
+<section id="social-media" class="social-section">
+    <h2 class="social-title">Support</h2>
+
+    <!-- 🎮 Bagian Sosial Media -->
+<div class="social-icons">
+    <!-- Instagram -->
+    <a href="https://instagram.com/username_ig_kamu" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+    </a>
+
+    <!-- Discord -->
+    <a href="https://discord.gg/your-server-invite" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/3670/3670157.png" alt="Discord">
+    </a>
+
+    <!-- YouTube -->
+    <a href="https://youtube.com/@raihanramadhan8454?si=TeHs-EC1YJvBfwOf" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube">
+    </a>
+
+    <!-- WhatsApp -->
+    <a href="https://wa.me/628xxxxxx" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+    </a>
+
+    <!-- Itch.io -->
+    <a href="https://gdexp-games.itch.io/" target="_blank">
+        <img src="https://itch.io/static/images/itchio-textless-white.svg" alt="Itch.io" width="40" height="40">
+    </a>
+</div>
+
+    <!-- Bagian Kerja Sama Pengembang -->
+    <div class="partnership">
+        <h3>Kerja Sama dengan Pengembang Game</h3>
+        <p>Kami membuka peluang kerja sama dengan pengembang game indie maupun profesional untuk 
+        berkolaborasi dalam proyek-proyek baru.</p>
+    </div>
+
+    <!-- Bagian Kerja Sama Studio -->
+    <div class="studio-partner">
+        <h3>Kolaborasi Studio Game</h3>
+        <p>Kami juga bekerja sama dengan studio games Indie seperti Anuka Team, Maewoo Studio, Claestis
+            untuk mengembangkan inovasi game bersama.</p>
+    </div>
+</section>
+
+</body>
+</html>
+    <!--Halaman 3-->

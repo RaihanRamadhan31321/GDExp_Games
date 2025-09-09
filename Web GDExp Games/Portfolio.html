@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GDExp Games Landing Page</title>
+    <link rel="stylesheet" href="Portfolio.css">
+</head>
+
+<!-- 🎯 Canvas sebagai background -->
+<canvas id="bgCanvas"></canvas>
+
+<script>
+    // Resize canvas otomatis sesuai layar
+    const canvas = document.getElementById("bgCanvas");
+    const ctx = canvas.getContext("2d");
+
+    function resizeCanvas() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        ctx.fillStyle = "#1e1a2e"; // Warna background
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+    }
+
+    window.addEventListener("resize", resizeCanvas);
+    resizeCanvas();
+</script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="portfolio.css">
+  <!-- Icon CDN (FontAwesome) -->
+  <script src="https://kit.fontawesome.com/your-kit-id.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="portfolio-container">
+
+    <!-- Foto Profil + About -->
+    <section class="about">
+      <img src="Folder Web GDExp/HANNN.jpg" alt="Foto Profil" class="profile-img">
+      <div class="about-text">
+        <h1>Raihan Ramadhan</h1>
+        <p>
+          Perkenalkan Saya, Raihan Ramadhan pengembang game development yang berfokus
+          pada pembuatan game 2D dan 3D berpengalaman menggunakan Tools Unity dan Unreal Engine,serta
+          saya mampu mengelola proyek dengan Notion dan Github.
+        </p>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="skills">
+      <h2>Tech Stack / Skills</h2>
+      <div class="skill-icons">
+        <img src="Folder Web GDExp/Unity.png" alt="Unity">
+        <img src="Folder Web GDExp/unreal.png" alt="Unreal">
+        <img src="Folder Web GDExp/html.png" alt="HTML5">
+        <img src="Folder Web GDExp/Github-Logo-PNG-Photo.png" alt="GitHub">
+        <img src="Folder Web GDExp/Notion-Logo-PNG.png" alt="Notion">
+      </div>
+    </section>
+
+    <!-- Repository -->
+    <section class="repositories">
+      <h2>Featured Repositories</h2>
+      <div class="repo-list">
+        <a href="https://github.com/Riatzu/ProjectAR_Wild" target="_blank" class="repo-card">
+          <h3>WildAR</h3>
+          <p>Repository Game Augmented Reality tentang Hewan-hewan diIndonesia.</p>
+        </a>
+        <a href="https://github.com/RaihanRamadhan31321/GEM" target="_blank" class="repo-card">
+          <h3>Gim Edukasi Mengajar</h3>
+          <p>Repository Game 2D Side-Scroller tentang Edukasi Game Development.</p>
+        </a>
+        <a href="https://github.com/RaihanRamadhan31321/Anuka" target="_blank" class="repo-card">
+          <h3>Kunjangan ngadi-ngadi</h3>
+          <p>Repository Game 2D Side-Scroller tentang Edukasi Kenakalan Remaja.</p>
+        </a>
+        <a href="https://github.com/RaihanRamadhan31321/Pulang-Sekolah-Moment-" target="_blank" class="repo-card">
+          <h3>Pulang PulangSekolah Moments</h3>
+          <p>Repository Game 2D Side-Scroller tentang Edukasi anak Sekolah.</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- Kontak -->
+    <section class="contact">
+    <h2>Connect with Me</h2>
+        <div class="social-icons">
+            <a href="https://github.com/RaihanRamadhan31321/RaihanRamadhan31321"><img src="Folder Web GDExp/Github-Logo-PNG-Photo.png" alt="GitHub"></a>
+            <a href="https://www.linkedin.com/in/raihan-ramadhan-9653142a7 "><img src="Folder Web GDExp/linkedin-logo.png" alt="LinkedIn"></a>
+            <a href="https://www.instagram.com/raihann_ramadhannn?igsh=cGtoZDF5OHd1Ym80"><img src="Folder Web GDExp/IG-Logo-.png" alt="Instagram"></a>
+            <a href="https://gdexp-games.itch.io/"><img src="Folder Web GDExp/itch.png" alt="Itch.io"></a>
+        </div>
+    </section>
+
+</div>
+</body>
+</html>

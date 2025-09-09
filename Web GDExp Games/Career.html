@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GDExp Games Landing Page</title>
+    <link rel="stylesheet" href="Career.css">
+</head>
+
+<!-- 🎯 Canvas sebagai background -->
+<canvas id="bgCanvas"></canvas>
+
+<script>
+    // Resize canvas otomatis sesuai layar
+    const canvas = document.getElementById("bgCanvas");
+    const ctx = canvas.getContext("2d");
+
+    function resizeCanvas() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        ctx.fillStyle = "#1e1a2e"; // Warna background
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+    }
+
+    window.addEventListener("resize", resizeCanvas);
+    resizeCanvas();
+</script>
+</body>
+</html>
